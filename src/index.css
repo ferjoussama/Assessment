@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.siderbarul-list{
+  height: 90%;
+}
+.li-routes{
+  color: #5F6165;
+  font-weight: 500;
+}
+.li-links{
+  width: 80%;
+    padding: 9px;
+    border-radius: 10px;
+}
+.activeli div{
+  background-color: #F3F5F8;
+}
+.mobile-nav{
+  display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 20px;
+}
