@@ -2,25 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-.siderbarul-list{
+.siderbarul-list {
   height: 90%;
 }
-.li-routes{
-  color: #5F6165;
+.li-routes {
+  color: #5f6165;
   font-weight: 500;
 }
-.li-links{
+.li-links {
   width: 80%;
-    padding: 9px;
-    border-radius: 10px;
+  padding: 9px;
+  border-radius: 10px;
 }
-.activeli div{
-  background-color: #F3F5F8;
+.activeli div {
+  background-color: #f3f5f8;
 }
-.mobile-nav{
+.mobile-nav {
   display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    padding: 20px;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+}
+.progressbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 60px;
+  gap: 10px;
+  height: 250px;
+  border-radius: 20px;
+}
+.progress {
+  position: relative;
+  margin: 4px;
+  float: left;
+  text-align: center;
+}
+.barOverflow {
+  /* Wraps the rotating .bar */
+  position: relative;
+  overflow: hidden; /* Comment this line to understand the trick */
+  width: 120px;
+  height: 95px; /* Half circle (overflow) */
+  margin-bottom: -14px; /* bring the numbers up */
+}
+.bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px; /* full circle! */
+  border-radius: 60%;
+  box-sizing: border-box;
+  border: 10px solid #eee; /* half gray, */
+  border-bottom-color: #0bf; /* half azure */
+  border-right-color: #0bf;
+}
+.progress span {
+  font-size: 20px;
+  position: relative;
+  bottom: 40px;
+}
+.apply-card {
+  background: #ffe0ba;
+  height: 300px;
+}
+.apply-card p {
+  font-family: "Effra";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+.apply-card h1 {
+  font-family: "Effra";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  color: #0f2837;
+}
+.apply-btn {
+  width: 150px;
+  height: 50px;
+  color: white;
+  font-family: "Effra";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 14px;
+  text-align: center;
+  background: #0f2837;
+  box-shadow: 0px 0px 40px rgba(235, 90, 60, 0.1);
+  border-radius: 4px;
+}
+.badge-box {
+  padding: 30px;
+  height: 300px;
+}
+.txt-badge {
+  color: #fac39b;
+}
+.Recommended-box{
+  height: 220px;
+}
+@media only screen and (max-width: 600px) {
+  .apply-card {
+    height: auto;
+  }
+  .apply-card .flex {
+    flex-direction: column !important;
+  }
+  .apply-card .flex div {
+    text-align: center;
+  }
 }

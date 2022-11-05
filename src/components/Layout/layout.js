@@ -246,19 +246,19 @@ export default function Layout(props) {
                   </div>
                 </div>
               </div>
-             
+
               <div
                 className="text-gray-600 visible lg:hidden relative mobile-nav"
                 onClick={() => setShow(!show)}
               >
-                 {show ? (
-                ''
-              ) : (
-                <div className="h-16 w-full flex items-center">
-                  <Logo />
-                  <p className="ml-2 text-3xl font-medium"> Motiv. </p>
-                </div>
-              )}
+                {show ? (
+                  ''
+                ) : (
+                  <div className="h-16 w-full flex items-center">
+                    <Logo />
+                    <p className="ml-2 text-3xl font-medium"> Motiv. </p>
+                  </div>
+                )}
                 {show ? (
                   ' '
                 ) : (
@@ -283,7 +283,7 @@ export default function Layout(props) {
                 )}
               </div>
             </nav>
-            <div className="container mx-auto py-10 h-64 md:w-4/5 w-11/12 px-6">
+            <div className="container mx-auto p-6">
               <Outlet />
             </div>
           </div>
