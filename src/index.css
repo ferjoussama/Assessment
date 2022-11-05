@@ -2,6 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/*  MAIN  FACTORING */
+
+body {
+  position: relative;
+}
+
+.select-option {
+  padding: 5px;
+  border-radius: 23px;
+  width: 150px;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #626364;
+}
+
+select {
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+
+/*  END MAIN FACTORING */
+
+/*  LAYOUT */
+
 .siderbarul-list {
   height: 90%;
 }
@@ -24,6 +49,11 @@
   align-items: center;
   padding: 20px;
 }
+
+/*  END LAYOUT */
+
+/*  DASHBOARD */
+
 .progressbox {
   display: flex;
   flex-direction: column;
@@ -105,9 +135,39 @@
 .txt-badge {
   color: #fac39b;
 }
-.Recommended-box{
-  height: 220px;
+.Recommended-box {
+  min-height: 220px;
+  border-radius: 20px;
 }
+
+.Recommended-box img {
+  width: 60%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+/*  DASHBOARD */
+
+/*  BOOKING PAGE  */
+
+.booking-page {
+  min-height: 88vh;
+}
+
+.car-box {
+  min-height: 220px;
+  border-radius: 20px;
+}
+
+.car-box  img {
+  width: 60%;
+  margin: auto;
+  margin-top: 10px;
+}
+/*  END BOOKING PAGE  */
+
+/*  MEDIA SCREEN QUERY */
+
 @media only screen and (max-width: 600px) {
   .apply-card {
     height: auto;
@@ -118,4 +178,15 @@
   .apply-card .flex div {
     text-align: center;
   }
+  .filters {
+    flex-direction: column !important;
+  }
+  .filters .itemfilter {
+    width: 100%;
+  }
+  .filters .itemfilter:nth-child(2) {
+    margin-top: 10px;
+  }
 }
+
+/*  END MEDIA SCREEN QUERY */

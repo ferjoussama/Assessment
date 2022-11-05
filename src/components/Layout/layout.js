@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet,Link } from 'react-router-dom'
 import { ReactComponent as Logo } from '../../images/svg/sidebar/logo.svg'
 import { ReactComponent as Dashboardicon } from '../../images/svg/sidebar/dashboardicon.svg'
 import { ReactComponent as Caricon } from '../../images/svg/sidebar/car.svg'
@@ -16,7 +16,7 @@ export default function Layout(props) {
       <div className="w-full h-full bg-gray-200">
         <div className="flex flex-no-wrap">
           {/* Sidebar starts */}
-          <div className="absolute lg:relative w-80 h-screen shadow bg-white hidden lg:block">
+          <div className="absolute lg:relative w-80  shadow bg-white hidden lg:block">
             <div className="h-16 w-full flex items-center px-8">
               <Logo />
               <p className="ml-2 text-3xl font-medium"> Motiv. </p>
@@ -24,6 +24,7 @@ export default function Layout(props) {
             <div className="flex justify-between flex-col siderbarul-list">
               <div>
                 <ul aria-orientation="vertical" className=" py-6">
+                  <Link to="/">
                   <li
                     onClick={() => setToggleActive(1)}
                     className={
@@ -38,6 +39,8 @@ export default function Layout(props) {
                       <span className="ml-2 li-routes">Dashboard</span>
                     </div>
                   </li>
+                  </Link>
+                  <Link to="/Booking">
                   <li
                     onClick={() => setToggleActive(2)}
                     className={
@@ -52,6 +55,7 @@ export default function Layout(props) {
                       <span className="ml-2 li-routes">Cars</span>
                     </div>
                   </li>
+                  </Link>
                 </ul>
               </div>
               <div>

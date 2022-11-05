@@ -9,7 +9,7 @@ import { ReactComponent as Range } from '../images/svg/progressbox/range.svg'
 import { ReactComponent as Tire } from '../images/svg/progressbox/tire.svg'
 import badge1 from '../images/img/badge.png'
 import badge2 from '../images/img/badge2.png'
-
+import Car from '../images/img/car.png'
 function Dashboard() {
   const BoxObjects = [
     {
@@ -90,9 +90,9 @@ function Dashboard() {
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 pt-6">
-        <Recommendedbox bg="#E1DFA4"/>
-        <Recommendedbox bg="#E1DFA4"/>
-        <Recommendedbox bg="#E1DFA4"/>
+        <Recommendedbox bg="#E1DFA4" img={Car} percent="64%" title="Mini Cooper"/>
+        <Recommendedbox bg="#E1DFA4" img={Car} percent="74%" title="Porsche 911 Carrera"/>
+        <Recommendedbox bg="#E1DFA4" img={Car} percent="74%" title="Porsche 911 Carrera"/>
       </div>
 
     </div>
