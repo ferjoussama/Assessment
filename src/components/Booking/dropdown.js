@@ -1,14 +1,19 @@
 import React from 'react'
 
 export default function DropdownComponent(props) {
-  
   return (
     <div className="relative border text-gray-800 bg-white  select-option">
-      <select className="appearance-none w-full py-1 px-2 bg-white" onChange={(e)=>props.filterItem(e.target.value)}>
-      <option value="all" >all</option>
-       {props.listitems && props.listitems.map((e,key) => (
-          <option key={key} value={e}>{e}</option>
-        ))}
+      <select
+        className="appearance-none w-full py-1 px-2 bg-white"
+        onChange={(e) => props.filterItem(e.target.value)}
+      >
+        <option value="all">all</option>
+        {props.listitems &&
+          props.listitems.map((e, key) => (
+            <option key={key} value={e}>
+              {e}
+            </option>
+          ))}
       </select>
       <div className="pointer-events-none absolute right-0 top-0 bottom-0 flex items-center px-2 text-gray-700 ">
         <svg

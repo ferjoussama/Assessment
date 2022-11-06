@@ -12,12 +12,12 @@ function Booking() {
   const [loading, setLoading] = useState(true)
   const [filterlist, setFilterlist] = useState([])
   const [searchParams, setSearchParams] = useSearchParams()
-  const [showModal, setShowModal] = React.useState(false);
-  const [current, setCurrent] = React.useState([]);
-  const ShowModalData=(bool,value)=>{
-    console.log(value);
-    setShowModal(bool);
-    setCurrent(value);
+  const [showModal, setShowModal] = React.useState(false)
+  const [current, setCurrent] = React.useState([])
+  const ShowModalData = (bool, value) => {
+    console.log(value)
+    setShowModal(bool)
+    setCurrent(value)
   }
   useEffect(() => {
     fetch(`https://mocki.io/v1/9eb5f170-c9ec-4137-b9f9-8ba3e275c080`)
@@ -55,7 +55,6 @@ function Booking() {
 
   return (
     <div className="booking-page container mx-auto">
-      
       <h1 className="font-bold text-3xl">Booking</h1>
       <div className=" flex items-center justify-between filters">
         <div className="flex items-center itemfilter">
@@ -75,21 +74,25 @@ function Booking() {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 pt-5">
         {!loading &&
           data.map((e, key) => (
-            <div onClick={()=>ShowModalData(true,e)}>
-            <Carbox
-              key={key}
-              bg="#FFFFFF"
-              img={e.imageurl}
-              controle={e.controle}
-              title={e.carname}
-              type={e.type}
-              priceday={e.priceday}
-              nbrplace={e.nbrplace}
-            />
+            <div onClick={() => ShowModalData(true, e)}>
+              <Carbox
+                key={key}
+                bg="#FFFFFF"
+                img={e.imageurl}
+                controle={e.controle}
+                title={e.carname}
+                type={e.type}
+                priceday={e.priceday}
+                nbrplace={e.nbrplace}
+              />
             </div>
           ))}
       </div>
-      <CarModal showModal={showModal} setShowModal={setShowModal} current={current}/>
+      <CarModal
+        showModal={showModal}
+        setShowModal={setShowModal}
+        current={current}
+      />
     </div>
   )
 }

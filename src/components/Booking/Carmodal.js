@@ -23,33 +23,33 @@ export default function CarModal(props) {
                     </span>
                   </button>
                 </div>
-              
+
                 <div className="relative p-6 flex-auto">
-                <img src={props.current.imageurl} className="m-auto"></img>
-                <div className="mt-5">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center">
-                      <Nbr />
-                      <p className="font-medium ml-4 text-slate-600 font-medium">
-                        {props.current.nbrplace}
-                      </p>
-                      <div className="flex items-center ml-4">
-                        <Manual />
+                  <img src={props.current.imageurl} className="m-auto"></img>
+                  <div className="mt-5">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        <Nbr />
                         <p className="font-medium ml-4 text-slate-600 font-medium">
-                          {props.current.controle}
+                          {props.current.nbrplace}
+                        </p>
+                        <div className="flex items-center ml-4">
+                          <Manual />
+                          <p className="font-medium ml-4 text-slate-600 font-medium">
+                            {props.current.controle}
+                          </p>
+                        </div>
+                      </div>
+                      <div>
+                        <p className="text-slate-600 font-medium float-right">
+                          <span className="font-bold text-black">
+                            ${props.current.priceday}
+                          </span>
+                          /d
                         </p>
                       </div>
                     </div>
-                    <div>
-                      <p className="text-slate-600 font-medium float-right">
-                        <span className="font-bold text-black">
-                          ${props.current.priceday}
-                        </span>
-                        /d
-                      </p>
-                    </div>
                   </div>
-                </div>
                   <p className="my-4 text-slate-500 text-lg leading-relaxed">
                     {props.current.description}
                   </p>

@@ -54,7 +54,6 @@ function Dashboard() {
   ]
 
   useEffect(() => {
-  
     fetch(`https://mocki.io/v1/853e895c-f5a7-4476-a985-e74f5594b1ee`)
       .then((response) => response.json())
       .then((Data) => {
