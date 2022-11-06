@@ -201,6 +201,9 @@ select {
     margin-top: 10px;
     height: 100px;
   }
+  .description-modal{
+    font-size: 12px;
+  }
 }
 
 /*  END MEDIA SCREEN QUERY */

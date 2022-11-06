@@ -50,7 +50,7 @@ export default function CarModal(props) {
                       </div>
                     </div>
                   </div>
-                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
+                  <p className="my-4 text-slate-500 text-lg leading-relaxed description-modal">
                     {props.current.description}
                   </p>
                 </div>
