@@ -13,7 +13,7 @@ import badge2 from '../images/img/badge2.png'
 function Dashboard() {
   const [data, setData] = useState(null)
   const [loading, setLoading] = useState(true)
- 
+
   const BoxObjects = [
     {
       icon: Energy,
@@ -54,6 +54,7 @@ function Dashboard() {
   ]
 
   useEffect(() => {
+  
     fetch(`https://mocki.io/v1/853e895c-f5a7-4476-a985-e74f5594b1ee`)
       .then((response) => response.json())
       .then((Data) => {
@@ -65,7 +66,6 @@ function Dashboard() {
       })
   }, [])
 
-  console.log(data);
   return (
     <div className="container mx-auto">
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -107,7 +107,6 @@ function Dashboard() {
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 pt-6">
-        
         {!loading &&
           data.map((e) => (
             <Recommendedbox

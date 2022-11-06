@@ -11,8 +11,7 @@ function CarBox(props) {
         <Heart />
       </div>
       <p className="font-mediual text-gray ">{props.type} </p>
-      <img src={props.img} width></img>
-    
+      <img src={props.img} ></img>
       <div className="mt-5">
         <div className="flex items-center justify-between">
           <div className='flex items-center'>

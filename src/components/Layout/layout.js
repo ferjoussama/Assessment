@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Outlet,Link } from 'react-router-dom'
+import { Outlet,Link,useNavigate   } from 'react-router-dom'
 import { ReactComponent as Logo } from '../../images/svg/sidebar/logo.svg'
 import { ReactComponent as Dashboardicon } from '../../images/svg/sidebar/dashboardicon.svg'
 import { ReactComponent as Caricon } from '../../images/svg/sidebar/car.svg'
@@ -11,6 +11,12 @@ import Avatar from '../../images/img/avatar.png'
 export default function Layout(props) {
   const [show, setShow] = useState(false)
   const [Active, setToggleActive] = useState(1)
+  let navigate = useNavigate();
+  const handleSearch= event => {
+    if (event.key === 'Enter') {
+      window.location.href="/Booking?type="+event.target.value;
+    }
+  };
   return (
     <>
       <div className="w-full h-full bg-gray-200">
@@ -186,9 +192,10 @@ export default function Layout(props) {
                         <Search />
                       </div>
                       <input
+                        onKeyDown={(e)=>handleSearch(e)}
                         className="bg-gray-200 focus:outline-none rounded w-full text-sm text-gray-500  pl-10 py-2"
                         type="text"
-                        placeholder="Search or Type"
+                        placeholder="Search or Type" 
                       />
                     </div>
                   </div>
@@ -222,6 +229,7 @@ export default function Layout(props) {
                     <input
                       className="border border-gray-100 focus:outline-none focus:border-indigo-700 rounded w-full text-sm text-gray-500 bg-gray-100 pl-12 py-2"
                       type="text"
+                      onKeyDown={(e)=>handleSearch(e)}
                       placeholder="Search or Type"
                     />
                   </div>
