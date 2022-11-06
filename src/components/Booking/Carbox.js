@@ -10,21 +10,22 @@ function CarBox(props) {
       <p className="font-bold text-lg ">{props.title} </p>
         <Heart />
       </div>
-      <img src={props.img}></img>
+      <p className="font-mediual text-gray ">{props.type} </p>
+      <img src={props.img} width></img>
     
       <div className="mt-5">
         <div className="flex items-center justify-between">
           <div className='flex items-center'>
             <Nbr />
-            <p className="font-medium ml-4 text-slate-600 font-medium">4</p>
+            <p className="font-medium ml-4 text-slate-600 font-medium">{props.nbrplace}</p>
             <div className='flex items-center ml-4'>
               <Manual />
-              <p className="font-medium ml-4 text-slate-600 font-medium">Manual</p>
+              <p className="font-medium ml-4 text-slate-600 font-medium">{props.controle}</p>
             </div>
         
           </div>
           <div>
-            <p className="text-slate-600 font-medium float-right"><span className='font-bold text-black'>$400</span>/d</p>
+            <p className="text-slate-600 font-medium float-right"><span className='font-bold text-black'>${props.priceday}</span>/d</p>
           </div>
         </div>
       </div>

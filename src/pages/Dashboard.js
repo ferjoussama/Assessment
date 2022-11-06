@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import ProgressBox from '../components/Dashboard/ProgressBox'
 import ApplyCard from '../components/Dashboard/card'
 import Badgebox from '../components/Dashboard/badge'
@@ -9,8 +9,11 @@ import { ReactComponent as Range } from '../images/svg/progressbox/range.svg'
 import { ReactComponent as Tire } from '../images/svg/progressbox/tire.svg'
 import badge1 from '../images/img/badge.png'
 import badge2 from '../images/img/badge2.png'
-import Car from '../images/img/car.png'
+
 function Dashboard() {
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(true)
+ 
   const BoxObjects = [
     {
       icon: Energy,
@@ -49,6 +52,20 @@ function Dashboard() {
       progresscolor: '#F6CC0D',
     },
   ]
+
+  useEffect(() => {
+    fetch(`https://mocki.io/v1/853e895c-f5a7-4476-a985-e74f5594b1ee`)
+      .then((response) => response.json())
+      .then((Data) => {
+        setLoading(false)
+        setData(Data)
+      })
+      .catch((e) => {
+        console.error(`An error occurred: ${e}`)
+      })
+  }, [])
+
+  console.log(data);
   return (
     <div className="container mx-auto">
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -90,11 +107,19 @@ function Dashboard() {
       </div>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 pt-6">
-        <Recommendedbox bg="#E1DFA4" img={Car} percent="64%" title="Mini Cooper"/>
-        <Recommendedbox bg="#E1DFA4" img={Car} percent="74%" title="Porsche 911 Carrera"/>
-        <Recommendedbox bg="#E1DFA4" img={Car} percent="74%" title="Porsche 911 Carrera"/>
+        
+        {!loading &&
+          data.map((e) => (
+            <Recommendedbox
+              bg={e.bg}
+              img={e.imageurl}
+              percent={e.recommended}
+              title={e.carname}
+              ptr={e.ptr}
+              priceh={e.priceh}
+            />
+          ))}
       </div>
-
     </div>
   )
 }

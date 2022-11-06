@@ -144,6 +144,7 @@ select {
   width: 60%;
   margin: auto;
   margin-top: 10px;
+  height: 180px;
 }
 
 /*  DASHBOARD */
@@ -163,6 +164,7 @@ select {
   width: 60%;
   margin: auto;
   margin-top: 10px;
+  height: 150px;
 }
 /*  END BOOKING PAGE  */
 
@@ -186,6 +188,18 @@ select {
   }
   .filters .itemfilter:nth-child(2) {
     margin-top: 10px;
+  }
+  .Recommended-box img {
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+    height: 120px;
+  }
+  .car-box  img {
+    width: 60%;
+    margin: auto;
+    margin-top: 10px;
+    height: 100px;
   }
 }
 

@@ -17,7 +17,7 @@ function Recommendedbox(props) {
         <div className="flex items-center justify-between">
           <div className='flex items-center'>
             <Icon1 />
-            <p className="font-medium ml-4 text-slate-600 font-medium">132 K</p>
+            <p className="font-medium ml-4 text-slate-600 font-medium">{props.ptr}</p>
             <div className="ml-4">
               <Icon2 />
             </div>
@@ -26,7 +26,7 @@ function Recommendedbox(props) {
             </div>
           </div>
           <div>
-            <p className="text-slate-600 font-medium float-right">$32/h</p>
+            <p className="text-slate-600 font-medium float-right">${props.priceh}/h</p>
           </div>
         </div>
       </div>
