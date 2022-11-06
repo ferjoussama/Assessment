@@ -70,6 +70,7 @@ function Dashboard() {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
         {BoxObjects.map((e, key) => (
           <ProgressBox
+            key={key}
             icon={e.icon}
             bg={e.bg}
             colortitle={e.colortitle}
@@ -77,7 +78,6 @@ function Dashboard() {
             percent={e.percent}
             deg={e.deg}
             bordercolor={e.progresscolor}
-            key={key}
           />
         ))}
       </div>
@@ -107,8 +107,9 @@ function Dashboard() {
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 pt-6">
         {!loading &&
-          data.map((e) => (
+          data.map((e, key) => (
             <Recommendedbox
+              key={key}
               bg={e.bg}
               img={e.imageurl}
               percent={e.recommended}

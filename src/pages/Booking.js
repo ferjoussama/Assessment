@@ -15,7 +15,7 @@ function Booking() {
   const [showModal, setShowModal] = React.useState(false)
   const [current, setCurrent] = React.useState([])
   const ShowModalData = (bool, value) => {
-    console.log(value)
+   
     setShowModal(bool)
     setCurrent(value)
   }
